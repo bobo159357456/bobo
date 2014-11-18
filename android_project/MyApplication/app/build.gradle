@@ -5,8 +5,8 @@ android {
     buildToolsVersion "20.0.0"
 
     defaultConfig {
-        applicationId "com.example.zmzp.myapplication"
-        minSdkVersion 21
+        applicationId "helloandroid.jikexueyuan.com.myapplication"
+        minSdkVersion 14
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
