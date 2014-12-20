@@ -1,27 +1,15 @@
-/*body{*/
-    /*background-image: url("1.jpg");*/
-/*}*/
-/*body{*/
-    /*background-image: url("1.jpg");*/
-    /*background-repeat: no-repeat;*/
-    /*background-attachment: fixed;*/
-    /*background-size: 100px 100px;*/
-    /*right和center*/
-/*}*/
-#MyDIV
-{
-    height: 800px;
-    padding:25px;
-    border:10px dotted #000000;
-    background-image:url('1.jpg');
-    background-origin:padding-box;
-    background-repeat:no-repeat;
+a:link{
+    color: #FF0000;
+    text-decoration: none;
+    background-color:aquamarine;
+}
+a:visited{
+    color: darkmagenta;
+}
+a:hover{
+    color: aquamarine;
+}
+a:active{
+    color: cyan;
 }
 
-#MyDIV1
-{
-    padding:25px;
-    border:10px dotted #000000;
-    background-color:yellow;
-    background-clip:border-box;
-}

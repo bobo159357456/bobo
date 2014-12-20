@@ -1,0 +1,12 @@
+apply plugin: 'java'
+//apply plugin: 'application'
+sourceSets {
+    main.java.srcDirs = ['src']
+    main.resources.srcDirs = ['src']
+    test.java.srcDirs = ['tests/java']
+    test.resources.srcDirs = ['tests/resources']
+}
+//
+//dependencies{
+//    compile fileTree (dir:'libs',include:['*.jar'])
+//}
