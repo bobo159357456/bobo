@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/blackbox.js"></script>
+		<script type="text/javascript" src="js/config.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script type="text/javascript">
+			mui.init();
+		</script>
+		
+		<script type="text/javascript">
+			 // H5 plus事件处理
+			function plusReady() {
+				loadJson();
+			}
+			if (window.plus) {
+				plusReady();
+			} else {
+				document.addEventListener("plusready", plusReady, false);
+			}
+		</script>
+	</head>
+	<body style="height: 100%;">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="mui.back()"></a>
+			<h1 class="mui-title">test</h1>
+		</header>
+		<div class="mui-content" id="hl" style="height: 100%;">
+			<div class="class="mui-input-row""></div>
+			<label >共计：</label><input class="mui-input mui-input-clear"  type="text" id="total" />
+			<div id="listDiv"></div>
+	    </div>
+	</body>
+	<script>
+			//
+		    function  loadJson(){
+		    	mui.ajax('http://192.168.0.106:8080/nrhcm/organ/organCtrl.htm?BLHMI=list',{
+					dataType:'html',//服务器返回json格式数据
+					type:'get',//HTTP请求类型
+					timeout:10000,//超时时间设置为10秒；
+					success:function(data){
+						//服务器返回响应，根据响应结果，分析是否登录成功；
+//						var data=JSON.stringify(data);
+						console.log(data);
+						var listDiv = document.getElementById('listDiv');
+						var totalInput=document.getElementById('total');
+//						var strjson=$(data).text()+"";
+						var jsonO = eval("("+data+")");
+						//共计赋值
+						console.log(jsonO.total);
+						
+						totalInput.value=jsonO.total;
+						var list = jsonO.rows;
+						for(var i=0;i<list.length;i++){
+							//list[i]为一条rows中的数据
+							var line = list[i];
+							console.log(line.lawPersonName);
+							var div = document.createElement('div');
+							div.textContent=line.lawPersonName;
+							listDiv.appendChild(div);
+						}
+					},
+					error:function(xhr,type,errorThrown){
+						//异常处理；
+						console.log(type);
+					}
+				});
+			}
+		</script>
+</html>
