@@ -1,0 +1,20 @@
+tr {
+background-color: #fff;
+}
+.alt {
+background-color: #ccc;
+}
+.highlight {
+font-weight:bold; 
+font-style:italic;
+}
+a.external {
+background: #fff url(images/external.png) no-repeat 100% 2px;
+padding-right: 16px;
+}
+.year {
+	background-color: #A370F0;
+}
+.special{
+	background-color: #000000;
+} 
