@@ -1,0 +1,15 @@
+a:link{
+    color: #FF0000;
+    text-decoration: none;
+    background-color:aquamarine;
+}
+a:visited{
+    color: darkmagenta;
+}
+a:hover{
+    color: aquamarine;
+}
+a:active{
+    color: cyan;
+}
+

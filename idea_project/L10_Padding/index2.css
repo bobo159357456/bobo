@@ -1,0 +1,16 @@
+p{
+    border-radius: 10px;
+    width: 200px;
+    background-color: blue;
+    text-align: center;
+    border: 2px solid bisque;
+
+}
+.cssid{
+    background-color: #FFCCF1;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    box-shadow: 5px 10px 10px #FFCCFF;
+    border-image: url("bj.jpg");
+}
